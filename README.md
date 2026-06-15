@@ -25,7 +25,7 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
+- The purpose of the game is for the player to guess the secret number between 1 and 100. The player wins if he/she is able to guess the secret number within 7 attempts. The highest score a player can have is 70, if he/she guesses the secret number on the first attempt.
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
 
@@ -33,11 +33,11 @@ It wrote the code, ran away, and now the game is unplayable.
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. A secret number is generated between 1 and 100.
+2. The player enters a number between 1 and 100.
+3. The app compares the guess with the secret number and returns the outcome with a message. 
+4. The player wins when they guess correctly within 7 attempts. When the player wins, the final score is shown, balloons appear and the game ends.
+5. The player loses when they reached 7 attempts without guessing the correct number. After 7 incorrect attempts, the final score is shown and the game ends.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
