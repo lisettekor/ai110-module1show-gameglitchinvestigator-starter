@@ -8,13 +8,15 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
+  Initially, the hint was incorrect. The message was “Go LOWER!” when it should be “Go HIGHER!”, while the message was “Go HIGHER!” when it should be “Go LOWER!”. Also, the attempts and scoring calculation was inconsistent and incorrect. 
+
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
+|Secret is 35. Guess is 9.|Hint shown is “Go HIGHER!”|Hint shown is “Go LOWER!”|None|
 | | | | |
 | | | | |
 
