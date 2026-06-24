@@ -29,6 +29,18 @@ It wrote the code, ran away, and now the game is unplayable.
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
 
+| Input | Expected Behavior | Actual Behavior |   Fixes Applied        |
+|-------|-------------------|-----------------|------------------------|
+|Secret is 35. Guess is 9.|Hint shown is “Go HIGHER!”|Hint shown is “Go LOWER!”|Outcome of “Too High” or “Too Low” was correct but the message is flipped between the two. 4 lines of code were updated.|
+|Click “New Game” button.|The page is refreshed to initial state where a new secret number is generated, attempt is zero, history is empty and score is reset to initial value.|Nothing happens.|AI fixed the "New Game" button handler which used to do nothing. Claude fixed it to reset the attempts and score to initial value, status to "playing" (to re-enable gameplay), cleared guess history. Additionally, it decided to also do the proper refactoring since logic_utils.py currently has stubs, it made updates to complete the implementation there and have app.py import from it.|
+|Change difficulty dropdown from Normal to Easy |“Guess a number between 1 and 20.” |It is always showing “Guess a number between 1 to 100.” Regardless of difficulty. |The message is hardcoded to "Guess a number between 1 and 100." It should use the low and high variables that are already calculated based on difficulty.
+•	Easy: 1-20
+•	Normal: 1-100
+•	Hard: 1-50|
+|Enter any guess number and click enter.  |Since there is a message that says “Press Enter to apply”, when you press enter, it should submit the guess. |There's a message "Press Enter to apply" on the text box. However, when I click enter, nothing happens. It does not submit the Guess.|The fix wraps the text input and submit button in a form using st.form() and st.form_submit_button(). Now when you press Enter in the text box, it will submit the form instead of just clearing the input.|
+
+
+
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
