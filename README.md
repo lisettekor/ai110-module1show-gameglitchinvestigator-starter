@@ -25,7 +25,7 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- The purpose of the game is for the player to guess the secret number between 1 and 100. The player wins if he/she is able to guess the secret number within 7 attempts. The highest score a player can have is 70, if he/she guesses the secret number on the first attempt.
+- The purpose of the game is for the player to guess the secret number within the attempts allowed depending on the difficulty selected. When difficulty is Easy, the range is 1 to 20 with 6 attempts allowed; When difficulty is Normal, the range is 1 to 100 with 8 attempts allowed; When difficulty is Hard, the range is 1 to 50 with 5 attempts allowed. The player wins if he/she is able to guess the secret number within the number of attempts allowed. 
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
 
@@ -33,11 +33,11 @@ It wrote the code, ran away, and now the game is unplayable.
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. A secret number is generated between 1 and 100.
+1. The default difficulty is Normal, so a secret number is generated between 1 and 100.
 2. The player enters a number between 1 and 100.
 3. The app compares the guess with the secret number and returns the outcome with a message. 
-4. The player wins when they guess correctly within 7 attempts. When the player wins, the final score is shown, balloons appear and the game ends.
-5. The player loses when they reached 7 attempts without guessing the correct number. After 7 incorrect attempts, the final score is shown and the game ends.
+4. The player wins when they guess correctly within 8 attempts since difficult is Normal. When the player wins, the final score is shown, balloons appear and the game ends.
+5. The player loses when they reached 8 attempts without guessing the correct number. The final score is shown and the game ends.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
@@ -48,6 +48,7 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 # pytest tests/
 # ========================= X passed in 0.XXs =========================
 ```
+===================================== 3 passed in 0.04s ======================================
 
 ## 🚀 Stretch Features
 
